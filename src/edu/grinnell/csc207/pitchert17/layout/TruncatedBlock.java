@@ -16,8 +16,7 @@ public class TruncatedBlock
   public String row(int i)
     throws Exception
   {
-    String givenRow = this.block.row(i);
-    return givenRow.substring(0, this.truncation);
+    return this.block.row(i).substring(0, this.truncation);
   }//row(int)
 
   public int height()
