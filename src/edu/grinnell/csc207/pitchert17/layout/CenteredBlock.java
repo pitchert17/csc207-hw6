@@ -19,7 +19,7 @@ public class CenteredBlock
     throws Exception
   {
     if (i > this.block.height())
-      throw new Exception("Invalid Row " + i);
+      throw new Exception("Invalid");
 
     int start = (this.width - this.block.width()) / 2;
     int end = this.width - start - this.block.width();
