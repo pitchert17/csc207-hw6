@@ -1,0 +1,21 @@
+ManyPackages gives on the ability to access which pack type is holds as well as how many of that pack is currently holds. BulkContainer one the other hand does not tell you anything about BulkItem. In our opinion ManyPackages and Package are better than BulkContainer and BulkItem because BulkContainer forces the user to re-input information on multiple items, which also allows them to overwrite previously existing data. ManyPackages allows for conviently store Packages that dpends on the size of the input Packages, which is a more intuitive process.
+
+Directly accessing the name fields is easy and conviently if the fields are made public, however this allows one to overwrite them, which can be problematic.
+getName simply returns the name of the object but must be implemented in each object you implement, which can be tedious. When comparing names this method must be called twice for each object.
+equals(String name) similarly is easily called as a method but it can only do comparison and will not allow you to return a name for any other possible uses.
+hasName(String name) is also fairly easy to implement, however like equals it does not allow you to use the name for other purposes.
+
+In this case it makes sense in the context of this problem, because it allows you to filter Food objects from nonFood objects. However it would be possible to implement them in the same object and add a new field that distinguishes between NonFood and Packages.
+
+When shopping for items int is a better choice because double allows for rounding errors and more precise units of measurement are more representative of real world experiences with money.
+
+Walkers problem separate liquids from solids as distinct items, whereas Sams method considers all food items to be Packages or BulkItems. In a practical sense it makes sense to make liquids and solid distinct because they are measured and priced in different ways.
+
+Walker's method uses different units of measurements, whereas Sam's uses weight but allows for different units of weight. We find Sam's method better because it allows for a higher degree of precision and it is easy to get a cumulative total with one procedure.
+
+Walker's method appears that it would require significantly less code, but perhaps at the cost of precision. On the other hand less code means it has less potential for bugs and errors. As clients we would prefer to have a higher degree of percision.
+
+Walker's method does not have a merge() method. We find that merge is very useful, especially in cases where you have many similar items in the cart. Merge allows you to consolidate every like item in the cart, making it easier to look throughthe cart.
+
+
+

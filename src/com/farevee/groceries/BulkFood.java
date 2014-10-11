@@ -15,6 +15,7 @@ public class BulkFood
     this.name = name;
     this.unit = unit;
     this.pricePerUnit = price;
-  }
+    this.supply = supply;
+  }//BulkFood(String, Unit, int, int)
   
-}
+}//class BulkFood

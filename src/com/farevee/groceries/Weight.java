@@ -2,9 +2,9 @@ package com.farevee.groceries;
 
 public class Weight
 {
-  Units unit;
+  public Units unit;
 
-  int amount;
+  public int amount;
   
   public Weight(Units unit, int amount)
   {

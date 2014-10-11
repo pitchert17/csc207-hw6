@@ -18,7 +18,7 @@ public class BulkItem
   
   public String toString()
   {
-    return this.amount + "of" + this.food.toString();
+    return this.amount + " " + this.unit.abbrev + " of " + this.food.name;
   }// toString()
   
   public Weight getWeight()
@@ -29,7 +29,33 @@ public class BulkItem
   public int getPrice()
   {
     return (this.amount * this.food.pricePerUnit);
-  }
-}
+  }//getPrice()
+  public BulkFood food()
+  {
+  
+    return this.food;
+  } // food()
+  
+  public Units unit()
+  {
+  return this.unit;
+  } // units()
+  
+  public int amount()
+  {
+  return this.amount;
+  } // amount()
+  
+  public boolean getEquals(BulkItem comp)
+  {
+    if (this.amount == comp.amount &&
+        this.unit == comp.unit &&
+        this.food == comp.food)
+      {
+        return true;
+      }//if
+    else return false;
+  }//getEquals(BulkItem)
+}//class BulkItem
 
 
