@@ -47,7 +47,8 @@ public class TBExpt
     TBUtils.print(pen, doubled);
     
     //Testing RightJustified
-    TextBlock righted = new RightJustified(blocka, 5);
+    TextBlock righted = new RightJustified(new TextLine("righty"), 10);
+    
     TBUtils.print(pen, righted);
     //Testing Part B
     TextLine tb1 = new TextLine("Hello");
